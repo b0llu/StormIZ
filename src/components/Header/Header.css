@@ -1,6 +1,10 @@
 nav {
     grid-area: nav;
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 a {
@@ -8,10 +12,17 @@ a {
     color: var(--content-color);
 }
 
+.brand-name {
+    margin-right: auto;
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
 .theme {
     font-size: 2rem;
     color: var(--content-color);
-    padding: 3rem;
+    padding: 2rem;
     cursor: pointer;
 }
 
