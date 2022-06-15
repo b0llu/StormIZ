@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { QuizState } from "./Interface";
 
 const initialState: QuizState = {
@@ -14,8 +14,13 @@ export const getCategories = createAsyncThunk(
       const response = await axios.get("/api/categories");
       return response.data;
     } catch (error) {
-      // return thunkAPI.rejectWithValue(error.response.data);
-      console.log(error)
+      if (
+        error instanceof AxiosError &&
+        error?.response &&
+        error?.response?.data?.error
+      ) {
+        return thunkAPI.rejectWithValue(error.response.data.error);
+      }
     }
   }
 );
@@ -25,12 +30,16 @@ const quizSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers(builder) {
-    builder.addCase(
-      getCategories.fulfilled,
-      (state, action: PayloadAction<QuizState>) => {
-        state.categories = action.payload.categories;
-      }
-    );
+    builder
+      .addCase(
+        getCategories.fulfilled,
+        (state, action: PayloadAction<QuizState>) => {
+          state.categories = action.payload.categories;
+        }
+      )
+      .addCase(getCategories.rejected, (state, action) => {
+        console.log(action.payload);
+      });
   },
 });
 
