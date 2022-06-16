@@ -25,6 +25,24 @@ export const getCategories = createAsyncThunk(
   }
 );
 
+export const getAllQuizes = createAsyncThunk(
+  "quiz/getAllQuizes",
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get("/api/quizzes");
+      return response.data;
+    } catch (error) {
+      if (
+        error instanceof AxiosError &&
+        error?.response &&
+        error?.response?.data?.error
+      ) {
+        return thunkAPI.rejectWithValue(error.response.data.error);
+      }
+    }
+  }
+);
+
 const quizSlice = createSlice({
   name: "quiz",
   initialState,
@@ -39,7 +57,13 @@ const quizSlice = createSlice({
       )
       .addCase(getCategories.rejected, (state, action) => {
         console.log(action.payload);
-      });
+      })
+      .addCase(
+        getAllQuizes.fulfilled,
+        (state, action: PayloadAction<QuizState>) => {
+          state.quizes = action.payload.quizes
+        }
+      );
   },
 });
 

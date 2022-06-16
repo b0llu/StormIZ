@@ -1,8 +1,8 @@
 import { Header, LandingContainer } from "components";
-import { LandingPage } from "pages";
+import { CategoryPage, LandingPage } from "pages";
 import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { getCategories } from "Redux/Reducers/quizSlice";
+import { getAllQuizes, getCategories } from "Redux/Reducers/quizSlice";
 import { useAppDispatch } from "Redux/Type";
 
 function App() {
@@ -10,14 +10,15 @@ function App() {
 
   useEffect(() => {
     dispatch(getCategories());
-  }),
-    [];
+    dispatch(getAllQuizes());
+  }, []);
 
   return (
     <LandingContainer>
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/:category/:categoryId" element={<CategoryPage />} />
       </Routes>
     </LandingContainer>
   );

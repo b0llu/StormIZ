@@ -1,0 +1,65 @@
+.subtitle {
+  font-size: 3rem;
+  color: var(--content-color);
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.quiz-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.quiz-img {
+  height: 20rem;
+  width: auto;
+}
+
+.quiz-item .card-img {
+  object-fit: fill;
+}
+
+.quiz-item .card-container.product-card {
+  width: 35rem;
+  height: 35rem;
+  background-color: var(--for-quiz);
+}
+
+.quiz-item .card-title,
+.quiz-item .card-subtitle,
+.quiz-item .card-description {
+  color: var(--content-color);
+  padding: 5px 2rem;
+  margin-left: 1rem;
+}
+
+.quiz-item .card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.quiz-item .card-description {
+  display: flex;
+  justify-content: space-between;
+  pointer-events: all;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.take-quiz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.take-quiz i {
+  margin-left: 1rem;
+}
+
+.take-quiz:hover {
+  color: var(--primary-color);
+  transition: 0.2s ease-in-out;
+}

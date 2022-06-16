@@ -11,6 +11,8 @@ export interface Quizzes {
   totalScore: number;
   mcqs: Mcqs[];
   categoryName: string;
+  image: string;
+  aboutQuiz: string;
 };
 
 export interface Categories {

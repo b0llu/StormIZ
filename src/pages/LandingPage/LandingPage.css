@@ -19,6 +19,10 @@ section {
   border-bottom: none;
 }
 
+.title span {
+  color: var(--primary-color);
+}
+
 .category-subtitle {
   text-align: center;
   font-size: 3rem;

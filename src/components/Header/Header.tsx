@@ -1,5 +1,6 @@
 import "./Header.css";
 import { useTheme } from "context/Theme.context";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const { theme, toggleTheme } = useTheme();
@@ -7,7 +8,9 @@ export const Header = () => {
   return (
     <nav>
       <div className="brand-name">
-        <i className="fas fa-bolt"></i> StormIZ
+        <Link className="link-to-home" to={`/`}>
+          <i className="fas fa-bolt"></i> StormIZ
+        </Link>
       </div>
       <div>
         <i className="theme fas fa-user"></i>
