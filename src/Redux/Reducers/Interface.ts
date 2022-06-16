@@ -9,6 +9,8 @@ export interface Quizes {
   _id: string;
   title: string;
   totalScore: number;
+  image: string;
+  aboutQuiz: string;
   mcqs: [
     {
       _id: string;

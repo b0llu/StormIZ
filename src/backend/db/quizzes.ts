@@ -11,6 +11,9 @@ export const quizzes: Quizzes[] = [
     _id: "1b994852-ebea-11ec-8ea0-0242ac120002",
     title: "Old is Gold",
     totalScore: 20,
+    image:
+      "https://deluxe.news/wp-content/uploads/2022/04/How-to-use-RetroArch-to-emulate-your-favorite-old-games.webp-780x470.jpeg",
+    aboutQuiz: "Try to solve this quiz which asks about some old things!",
     mcqs: [
       {
         _id: "dddcd7a2-a479-482e-ae82-d55e2468534d",
@@ -54,6 +57,8 @@ export const quizzes: Quizzes[] = [
     _id: "1b99471c-ebea-11ec-8ea0-0242ac120002",
     title: "Only OG's can answer",
     totalScore: 20,
+    image: "https://www.trueachievements.com/customimages/l/122683.jpg",
+    aboutQuiz: "Only OG Gamers can answer this Quiz!",
     mcqs: [
       {
         _id: "dasdas7a2-a479-482e-ae82-d55e246853d",
@@ -97,6 +102,9 @@ export const quizzes: Quizzes[] = [
     _id: "1b9945fa-ebea-11ec-8ea0-0242ac120002",
     title: "GTA V",
     totalScore: 20,
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/capsule_616x353.jpg?t=1618856444",
+    aboutQuiz: `"I'll Swing By And Sign The Contracts, Alright? Just Ignore The Bodies!"`,
     mcqs: [
       {
         _id: "1b993b5a-ebea-11ec-8ea0-0242ac120002",
@@ -145,6 +153,9 @@ export const quizzes: Quizzes[] = [
     _id: "1b9944ce-ebea-11ec-8ea0-0242ac120002",
     title: "Red Dead Redemption 2",
     totalScore: 20,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWej0kyfmjtgkDATMP4Ax7cktiszfKAq5xXSH3cMFkXXTrbVNMyc3dLGnjFkAUtlKUxqg&usqp=CAU",
+    aboutQuiz: `"We're Thieves In A World That Don't Want Us No More." - Arthur Morgan`,
     mcqs: [
       {
         _id: "1b994974-ebea-11ec-8ea0-0242ac120002",
@@ -198,6 +209,9 @@ export const quizzes: Quizzes[] = [
     _id: "1b9950cc-ebea-11ec-8ea0-0242ac120002",
     title: "The Witcher 3 Wild Hunt",
     totalScore: 20,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5XSn5CZtJoy_9Ta2XFAv-WybKTXTzpNwJOjGk2YsnLSTQ73Y0pyUN_Y_OT-QC0c8DRcg&usqp=CAU",
+    aboutQuiz: `"Kings Die, Realms Fall, But Magic Endures"`,
     mcqs: [
       {
         _id: "1b9951a8-ebea-11ec-8ea0-0242ac120002",

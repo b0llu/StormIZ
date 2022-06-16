@@ -1,11 +1,43 @@
 .grid-layout {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 10rem repeat(2, auto);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 5rem repeat(4, 1fr) 5rem;
+  grid-template-rows: 10rem repeat(2, auto);
+  grid-template-areas:
+    "nav nav nav nav nav nav"
+    "... contentarea contentarea contentarea contentarea ..."
+    "... contentarea contentarea contentarea contentarea ...";
+  background-color: var(--default-color);
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  .quiz-container {
+    grid-template-rows: 7rem repeat(2, auto);
     grid-template-areas:
-        'nav nav nav nav nav nav'
-        '... contentarea contentarea contentarea contentarea ...'
-        '... contentarea contentarea contentarea contentarea ...';
-    background-color: var(--default-color);
+      "nav nav nav nav nav nav"
+      "contentarea contentarea contentarea contentarea contentarea contentarea"
+      "contentarea contentarea contentarea contentarea contentarea contentarea";
+  }
+
+  .landing-page-container {
+    margin-bottom: none;
+  }
+
+  nav {
+    margin-right: auto;
+    flex-direction: column;
+  }
+
+  .brand-name {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 2rem;
+  }
+
+  .theme {
+    padding: 2rem 3rem;
+  }
 }
