@@ -9,7 +9,7 @@ export const Header = () => {
     <nav>
       <div className="brand-name">
         <Link className="link-to-home" to={`/`}>
-          <i className="fas fa-bolt"></i> StormIZ
+          <i className="fas fa-bolt"></i> StormQuiz
         </Link>
       </div>
       <div>
