@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { RootState } from "Redux/Store";
 import { useAppSelector } from "Redux/Type";
 import "./CategoryPage.css";
@@ -25,21 +25,17 @@ export const CategoryPage = () => {
                 className="card-container product-card card-shadow"
               >
                 <div className="quiz-img">
-                  <img
-                    className="card-img"
-                    src={quiz.image}
-                    alt="Quiz Image"
-                  />
+                  <img className="card-img" src={quiz.image} alt="Quiz Image" />
                 </div>
                 <h1 className="card-subtitle">{quiz.title}</h1>
                 <h2 className="card-title">{quiz.aboutQuiz}</h2>
                 <p className="card-description">
                   {quiz.mcqs.length} Questions
-                  <a href="../rule-page/rule.html">
+                  <Link to={`/${quiz._id}`}>
                     <span className="take-quiz">
                       Take Quiz <i className="fas fa-chevron-right"></i>
                     </span>
-                  </a>
+                  </Link>
                 </p>
               </div>
             );
