@@ -1,0 +1,71 @@
+section {
+  grid-area: contentarea;
+}
+
+.landing-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--content-color);
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+.category-subtitle {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--content-color);
+  margin-top: 5rem;
+  font-weight: 500;
+}
+
+.category-selector {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.category-title {
+  text-align: center;
+  color: var(--content-color);
+  margin-top: 2rem;
+  background-color: var(--for-quiz);
+  padding: 4rem;
+  width: 30rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: none;
+}
+
+.category-title h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.category-title p {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  font-weight: 400;
+}
+
+.category-title:hover {
+  color: var(--primary-color);
+  transition: 0.2s ease-in-out;
+}
