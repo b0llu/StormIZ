@@ -6,26 +6,72 @@
     width: 70%;
 }
 
-.subtitle {
+.question-subtitle {
     font-size: 4rem;
     font-weight: 500;
+    color: var(--content-color);
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .marking {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 5rem;
+    margin-top: 1rem;
     width: 100%;
 }
 
 .marking .subtitle {
     font-size: 2rem;
     font-weight: 500;
+    margin-top: 1rem;
 }
 
 .bold {
     font-weight: bold;
+}
+
+.cta-btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--content-color);
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-top: 4rem;
+}
+
+.cta-btns h1, .cta-btns i {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cta-btns .exit {
+    color: var(--alert-color);
+    border: 1px solid var(--alert-color);
+    padding: 4px 2rem;
+    border-radius: 5px;
+}
+
+.cta-btns .exit:hover {
+    background-color: var(--alert-color);
+    color: #000;
+    transition: 0.2s ease-in-out;
+}
+
+.cta-btns .next {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 4px 2rem;
+    border-radius: 5px;
+}
+
+.cta-btns .next:hover {
+    background-color: var(--primary-color);
+    color: #000;
+    transition: 0.2s ease-in-out;
 }
 
 .question {
@@ -67,7 +113,6 @@
 
 .correct {
     background-color: var(--success-color);
-    font-weight: bold;
     color: #fff;
 }
 
@@ -77,7 +122,6 @@
 
 .wrong {
     background-color: var(--alert-color);
-    font-weight: bold;
     color: #fff;
 }
 
@@ -85,9 +129,15 @@
     background-color: var(--alert-color);
 }
 
-.take-quiz {
-    font-size: 3rem;
-    margin: 4rem 0;
+.question-result {
+    font-size: 2rem;
+    color: var(--content-color);
+    cursor: pointer;
+}
+
+.question-result:hover {
+    color: var(--primary-color);
+    transition: 0.2s ease-in-out;
 }
 
 @media screen and (max-width: 1400px) {

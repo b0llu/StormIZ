@@ -22,7 +22,26 @@ export interface Quizes {
   categoryName: string;
 }
 
+export interface Quiz {
+  _id: string;
+  title: string;
+  totalScore: number;
+  image: string;
+  aboutQuiz: string;
+  mcqs: [
+    {
+      _id: string;
+      question: string;
+      options: string[];
+      answer: string;
+    }
+  ];
+  categoryName: string;
+}
+
 export interface QuizState {
   categories: Categories[];
   quizes: Quizes[];
+  quiz: any;
+  loading: boolean;
 }
