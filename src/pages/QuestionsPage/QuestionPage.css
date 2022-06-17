@@ -1,0 +1,153 @@
+.question-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+}
+
+.question-subtitle {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--content-color);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.marking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.marking .subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.cta-btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--content-color);
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-top: 4rem;
+}
+
+.cta-btns h1, .cta-btns i {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cta-btns .exit {
+    color: var(--alert-color);
+    border: 1px solid var(--alert-color);
+    padding: 4px 2rem;
+    border-radius: 5px;
+}
+
+.cta-btns .exit:hover {
+    background-color: var(--alert-color);
+    color: #000;
+    transition: 0.2s ease-in-out;
+}
+
+.cta-btns .next {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 4px 2rem;
+    border-radius: 5px;
+}
+
+.cta-btns .next:hover {
+    background-color: var(--primary-color);
+    color: #000;
+    transition: 0.2s ease-in-out;
+}
+
+.question {
+    text-align: left;
+    margin-top: 5rem;
+    color: var(--content-color);
+    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    width: 100%;
+    font-weight: 500;
+}
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    width: 100%;
+    color: var(--content-color);
+}
+
+.answers {
+    width: 100%;
+    border-radius: 2rem;
+    background-color: var(--for-quiz);
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+.answers:hover {
+    background-color: var(--for-answer);
+    transition: 0.2s ease-in-out;
+}
+
+.correct {
+    background-color: var(--success-color);
+    color: #fff;
+}
+
+.correct:hover {
+    background-color: var(--success-color);
+}
+
+.wrong {
+    background-color: var(--alert-color);
+    color: #fff;
+}
+
+.wrong:hover {
+    background-color: var(--alert-color);
+}
+
+.question-result {
+    font-size: 2rem;
+    color: var(--content-color);
+    cursor: pointer;
+}
+
+.question-result:hover {
+    color: var(--primary-color);
+    transition: 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1400px) {
+    .question-wrapper {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .question-wrapper {
+        width: 100%;
+    }
+}
