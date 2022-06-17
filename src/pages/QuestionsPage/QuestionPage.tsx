@@ -39,7 +39,9 @@ export const QuestionPage = () => {
         <div className="question-wrapper">
           <h2 className="question-subtitle">{quiz.title}</h2>
           <div className="cta-btns">
-            <h1 className="exit">Quit</h1>
+            <h1 onClick={() => navigate("/")} className="exit">
+              Quit
+            </h1>
             <h1
               onClick={() => {
                 if (questionNumber + 1 === quiz?.mcqs?.length) {
