@@ -42,19 +42,24 @@ export const QuestionPage = () => {
             <h1 onClick={() => navigate("/")} className="exit">
               Quit
             </h1>
-            <h1
-              onClick={() => {
-                if (questionNumber + 1 === quiz?.mcqs?.length) {
-                  navigate("/result", { state: { quiz, score } });
-                } else {
+            {questionNumber + 1 === quiz?.mcqs?.length ? (
+              <h1
+                onClick={() => navigate("/result", { state: { quiz, score } })}
+                className="next"
+              >
+                Result
+              </h1>
+            ) : (
+              <h1
+                onClick={() => {
                   setQuestionNumber((prev: number) => prev + 1);
-                }
-                setUserAnswer("");
-              }}
-              className="next"
-            >
-              {questionNumber + 1 === quiz?.mcqs?.length ? "Result" : "Next"}
-            </h1>
+                  setUserAnswer("");
+                }}
+                className="next"
+              >
+                Next
+              </h1>
+            )}
           </div>
           <div className="marking">
             <h2 className="subtitle">

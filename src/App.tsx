@@ -1,5 +1,5 @@
 import { Header, LandingContainer, RuleRouting } from "components";
-import { CategoryPage, LandingPage, QuestionPage } from "pages";
+import { CategoryPage, LandingPage, QuestionPage, ResultPage } from "pages";
 import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { getAllQuizes, getCategories } from "Redux/Reducers/quizSlice";
@@ -22,6 +22,7 @@ function App() {
         <Route element={<RuleRouting />}>
           <Route path="/:quizId" element={<QuestionPage />} />
         </Route>
+        <Route path="/result" element={<ResultPage />} />
       </Routes>
     </LandingContainer>
   );

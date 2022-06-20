@@ -17,10 +17,7 @@ export const Header = () => {
         <a target={"_blank"} href="https://twitter.com/TheBestDhruv">
           <i className="theme fab fa-twitter"></i>
         </a>
-        <a
-          target={"_blank"}
-          href="https://github.com/b0llu/StormIZ/tree/developer"
-        >
+        <a target={"_blank"} href="https://github.com/b0llu/StormQuiz">
           <i className="theme fab fa-github"></i>
         </a>
         {theme === "light" ? (
