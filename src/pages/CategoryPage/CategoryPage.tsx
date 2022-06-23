@@ -1,3 +1,4 @@
+import { useDocTitle } from "Hooks/useTitle";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { RootState } from "Redux/Store";
@@ -9,6 +10,9 @@ type QuizParams = {
 };
 
 export const CategoryPage = () => {
+
+  useDocTitle('Category | StormQuiz')
+
   const { category } = useParams<QuizParams>();
   const quizes = useAppSelector((state: RootState) => state.quiz.quizes);
 

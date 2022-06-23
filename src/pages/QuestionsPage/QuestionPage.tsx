@@ -1,4 +1,5 @@
 import { Loader } from "components";
+import { useDocTitle } from "Hooks/useTitle";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getQuiz } from "Redux/Reducers/quizSlice";
@@ -17,6 +18,8 @@ export const QuestionPage = () => {
   const [questionNumber, setQuestionNumber] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
   const [userAnswer, setUserAnswer] = useState<string>("");
+
+    useDocTitle(`Questions | StormQuiz`);
 
   useEffect(() => {
     quizId && dispatch(getQuiz(quizId));

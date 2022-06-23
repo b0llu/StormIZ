@@ -13,7 +13,6 @@ export const Header = () => {
         </Link>
       </div>
       <div>
-        <i className="theme fas fa-user"></i>
         <a target={"_blank"} href="https://twitter.com/TheBestDhruv">
           <i className="theme fab fa-twitter"></i>
         </a>

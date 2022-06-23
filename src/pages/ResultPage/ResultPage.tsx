@@ -1,3 +1,4 @@
+import { useDocTitle } from "Hooks/useTitle";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./ResultPage.css";
@@ -5,6 +6,8 @@ import "./ResultPage.css";
 export const ResultPage = () => {
   const { state }: any = useLocation();
   const navigate = useNavigate();
+
+  useDocTitle('Result | StormQuiz')
 
   useEffect(() => {
     if (!state) {
