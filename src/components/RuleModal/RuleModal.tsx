@@ -1,7 +1,11 @@
+import { useDocTitle } from "Hooks/useTitle";
 import { Link } from "react-router-dom";
 import "./RuleModal.css";
 
 export const RuleModal = ({ showRules, setShowRules }: any) => {
+
+  useDocTitle('Rules | StromQuiz')
+
   return (
     <section style={{ marginTop: "10rem" }}>
       <div className="rule-wrapper">

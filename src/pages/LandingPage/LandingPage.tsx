@@ -1,9 +1,13 @@
+import { useDocTitle } from "Hooks/useTitle";
 import { Link } from "react-router-dom";
 import { RootState } from "Redux/Store";
 import { useAppSelector } from "Redux/Type";
 import "./LandingPage.css";
 
 export const LandingPage = () => {
+
+  useDocTitle('Home | StormQuiz')
+
   const categories = useAppSelector(
     (state: RootState) => state.quiz.categories
   );
