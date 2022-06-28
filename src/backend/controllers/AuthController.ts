@@ -13,7 +13,7 @@ const sign = require("jwt-encode");
  * body contains {firstName, lastName, email, password}
  * */
 
-export const signupHandler = function (schema, request) {
+export const signupHandler = function (schema: any, request: any) {
   const { email, password, ...rest } = JSON.parse(request.requestBody);
   try {
     // check if email already exists
@@ -59,7 +59,7 @@ export const signupHandler = function (schema, request) {
  * body contains {email, password}
  * */
 
-export const loginHandler = function (schema, request) {
+export const loginHandler = function (schema: any, request: any) {
   const { email, password } = JSON.parse(request.requestBody);
   try {
     const foundUser = schema.users.findBy({ email });
@@ -98,19 +98,19 @@ export const loginHandler = function (schema, request) {
   }
 };
 
-export const checkToken = function (schema, request) {
-  const userId = requiresAuth.call(this, request);
-  try {
-    if (!userId) {
-      new Response(404, {}, { result: "User Not available / Token not valid" });
-    }
-  } catch (error) {
-    return new Response(
-      500,
-      {},
-      {
-        error,
-      }
-    );
-  }
-};
+// export const checkToken = function (schema: any, request: any) {
+//   const userId = requiresAuth.call(this, request);
+//   try {
+//     if (!userId) {
+//       new Response(404, {}, { result: "User Not available / Token not valid" });
+//     }
+//   } catch (error) {
+//     return new Response(
+//       500,
+//       {},
+//       {
+//         error,
+//       }
+//     );
+//   }
+// };

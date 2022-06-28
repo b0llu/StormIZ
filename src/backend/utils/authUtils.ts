@@ -2,13 +2,16 @@ import { Response } from "miragejs";
 import dayjs from "dayjs";
 import jwt_decode from "jwt-decode";
 
-export const requiresAuth = function (request) {
+interface MyToken {
+  encodedToken: string;
+  email: string;
+}
+
+const ENV: any = process.env.REACT_APP_JWT_SECRET;
+
+export const requiresAuth = function (this: any, request: any) {
   const encodedToken = request.requestHeaders.authorization;
-  console.log(encodedToken, process.env.REACT_APP_JWT_SECRET);
-  const decodedToken = jwt_decode(
-    encodedToken,
-    process.env.REACT_APP_JWT_SECRET
-  );
+  const decodedToken = jwt_decode<MyToken>(encodedToken, ENV);
   if (decodedToken) {
     const user = this.db.users.findBy({ email: decodedToken.email });
     if (user) {
